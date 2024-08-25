@@ -204,7 +204,7 @@
 // }
 // console.log("loop has finished");
 
-//VIDEO 71 - FILTER METHOD!!!!!!!!!!!!!!!!!!!!!!!
+//VIDEO 71 - FILTER METHOD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // const scores = [10, 30, 15, 25,50 ,40 ,5];
 
@@ -229,7 +229,7 @@
 
 // console.log(premiumUsers);
 
-//VIDEO 72 - MAP METHOD!!!!!!!!!!!!!!!!!!!!!!!
+//VIDEO 72 - MAP METHOD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // const prices = [20, 10, 30, 25, 15, 40, 80, 5];
 
@@ -254,7 +254,7 @@
 
 //  console.log(saleProducts);
 
-//VIDEO 73 - REDUCE METHOD!!!!!!!!!!!!!!!!!!!!!!!
+//VIDEO 73 - REDUCE METHOD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // const scores = [10, 20, 60, 40, 70, 90, 30];
 
@@ -283,7 +283,7 @@
 
 // console.log(marioTotal);
 
-//VIDEO 74 - FIND METHOD!!!!!!!!!!!!!!!!!!!!!!!
+//VIDEO 74 - FIND METHOD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // const scores = [10, 5, 0, 40, 30, 10, 90, 70];
 
@@ -291,7 +291,7 @@
 
 // console.log(firstHighScore);
 
-// VIDEO 75 - SORT METHOD!!!!!!!!!!!!!!!!!!!!!!!
+// VIDEO 75 - SORT METHOD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 //example 1 - sorting strings
 // const names = ['mario', 'shaun', 'chun-li', 'yoshi', 'luigi'];
@@ -330,7 +330,7 @@
 
 // console.log(players);
 
-//VIDEO 76 - CHAINING ARRAY METHODS!!!!!!!!!!!!!!!!!!!!!!!
+//VIDEO 76 - CHAINING ARRAY METHODS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // const products = [
 //     {name: 'gold star', price: 30},
@@ -352,7 +352,7 @@
 
 // console.log(promos);
 
-//VIDEO 82 - DATES AND TIMES IN JAVASCRIPT!!!!!!!!!!!!!!!!!!!!!!!
+//VIDEO 82 - DATES AND TIMES IN JAVASCRIPT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // const now = new Date();
 // console.log(now);
@@ -374,7 +374,7 @@
 // console.log(now.toTimeString());
 // console.log(now.toLocaleString());
 
-//VIDEO 83 - TIMESTAMPS & COMPARISONS!!!!!!!!!!!!!!!!!!!!!!!
+//VIDEO 83 - TIMESTAMPS & COMPARISONS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // const before = new Date('February 1 2019 7:30:59');
 // const now = new Date();
@@ -400,7 +400,7 @@
 // const timestamp = 1675938474990;
 // console.log(new Date(timestamp));
 
-//VIDEO 84 - BUILDING A DIGITAL CLOCK!!!!!!!!!!!!!!!!!!!!!!!
+//VIDEO 84 - BUILDING A DIGITAL CLOCK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // const clock = document.querySelector('.clock');
 
@@ -422,16 +422,16 @@
 
 // setInterval(tick, 1000);
 
-//VIDEO 85 - DATE-FNS LIBRARY!!!!!!!!!!!!!!!!!!!!!!!
+//VIDEO 85 - DATE-FNS LIBRARY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // const now = new Date();
 
 // console.log(dateFns);
 
-//VIDEO 86 - ASYNCHRONOUS JAVASCRIPT!!!!!!!!!!!!!!!!!!!!!!!
+//VIDEO 86 - ASYNCHRONOUS JAVASCRIPT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //asynchronous code is code that can start now and finish later
 
-//VIDE 87 - ASYNC CODE IN ACTION!!!!!!!!!!!!!!!!!!!!!!!
+//VIDE 87 - ASYNC CODE IN ACTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // console.log(1);
 // console.log(2);
@@ -443,7 +443,7 @@
 // console.log(3);
 // console.log(4);
 
-//VIDE 88 - WHAT ARE HTTP REQUESTS!!!!!!!!!!!!!!!!!!!!!!!
+//VIDE 88 - WHAT ARE HTTP REQUESTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 //we make http requests to get data from another server
 
@@ -461,7 +461,7 @@
 // request.open('GET', 'https://jsonplaceholder.typicode.com/todos/');
 // request.send();
 
-//VIDEO 90 - RESPONSE STATUS!!!!!!!!!!!!!!!!!!!!!!!
+//VIDEO 90 - RESPONSE STATUS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // const request = new XMLHttpRequest();
 
@@ -477,7 +477,7 @@
 // request.open('GET', 'https://jsonplaceholder.typicode.com/todoss/');
 // request.send();
 
-//VIDEO 91 - CALLBACK FUNCTIONS!!!!!!!!!!!!!!!!!!!!!!!
+//VIDEO 91 - CALLBACK FUNCTIONS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // const getTodos = (callback) => {
 //     const request = new XMLHttpRequest();
@@ -511,7 +511,7 @@
 // console.log(3);
 // console.log(4);
 
-//VIDEO 92 - JSON DATA!!!!!!!!!!!!!!!!!!!!!!!
+//VIDEO 92 - JSON DATA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // const getTodos = (callback) => {
 //     const request = new XMLHttpRequest();
@@ -546,37 +546,144 @@
 // console.log(3);
 // console.log(4);
 
-//VIDEO 93 - CALLBACK HELL
+//VIDEO 93 - CALLBACK HELL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-const getTodos = (callback) => {
-    const request = new XMLHttpRequest();
+// const getTodos = (resource, callback) => {
+//     const request = new XMLHttpRequest();
 
-    request.addEventListener('readystatechange', () => {
-        // console.log(request, request.readyState)
-        if(request.readyState === 4 &&  request.status == 200){
-            const data = JSON.parse(request.responseText);
-            callback(undefined, data);
-        } else if(request.readyState === 4){
-            callback('could not fetch data', undefined);
-        }
-    });
+//     request.addEventListener('readystatechange', () => {
+//         // console.log(request, request.readyState)
+//         if(request.readyState === 4 &&  request.status == 200){
+//             const data = JSON.parse(request.responseText);
+//             callback(undefined, data);
+//         } else if(request.readyState === 4){
+//             callback('could not fetch data', undefined);
+//         }
+//     });
 
-    request.open('GET', 'todos.json');
-    request.send();
+//     request.open('GET', resource);
+//     request.send();
 
-};
+// };  
 
-console.log(1);
-console.log(2);
+// getTodos('todos/luigi.json', (err, data) => {
+//     console.log(data);
+//     getTodos('todos/mario.json', (err,data) => {
+//         console.log(data);
+//         getTodos('todos/shaun.json', (err, data) => {
+//             console.log(data);
+//         })
+//     })
+// });
 
-getTodos((err, data) => {
-    console.log('callback fired');
-    if(err){
-        console.log(err);
-    } else {
-        console.log(data);
-    }
+//VIDEO 94 - PROMISE BASICS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// const getTodos = (resource) => {
+
+//  return new Promise((resolve, reject) => {
+//     const request = new XMLHttpRequest();
+
+//     request.addEventListener('readystatechange', () => {
+//         // console.log(request, request.readyState)
+//         if(request.readyState === 4 &&  request.status == 200){
+//             const data = JSON.parse(request.responseText);
+//             resolve(data);
+//         } else if(request.readyState === 4){
+//             reject('error getting resource');
+//         }
+//     });
+
+//     request.open('GET', resource);
+//     request.send();
+
+//  })
+
+// };  
+
+// getTodos('todos/luigi.json').then( data => {
+// console.log('promise resolved: ', data);
+// }).catch( err => {
+//     console.log('promise rejected: ', err)
+// });
+
+//pomise example
+
+// const getSomething = () => {
+    
+//     return new Promise((resolve, reject) => {
+//         //fetch something
+//         resolve('some data');
+//         // reject('some error');
+//     });
+
+// };
+
+// getSomething().then((data) => {
+//  console.log(data);
+// }, (err) => {
+// console.log(err);
+// });
+
+// getSomething().then(data => {
+//     console.log(data);
+// }).catch(err => {
+//     console.log(err);
+// })
+
+//VIDE0 95 - CHAINING PROMISES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// const getTodos = (resource) => {
+
+//     return new Promise((resolve, reject) => {
+//        const request = new XMLHttpRequest();
+   
+//        request.addEventListener('readystatechange', () => {
+//            // console.log(request, request.readyState)
+//            if(request.readyState === 4 &&  request.status == 200){
+//                const data = JSON.parse(request.responseText);
+//                resolve(data);
+//            } else if(request.readyState === 4){
+//                reject('error getting resource');
+//            }
+//        });
+   
+//        request.open('GET', resource);
+//        request.send();
+   
+//     })
+   
+//    };  
+   
+//    getTodos('todos/luigi.json').then( data => {
+//    console.log('promise 1 resolved: ', data);
+//    return getTodos('todos/mario.json');
+//    }).then(data => {
+// console.log('promise 2 resolved: ', data);
+// return getTodos('todos/shaun.json');
+//    }).then(data => {
+//     console.log('promise 3 resolved: ', data);
+//    }).catch( err => {
+//        console.log('promise rejected: ', err)
+//    });
+
+//VIDEO 96 - THE FETCH API!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// fetch('todos/luigi.json').then((response) => {
+//     console.log('resolved', response);
+//     return response.json();
+// }).then(data => {
+//     console.log(data);
+// }).catch((err) => {
+//     console.log('rejected', err);
+// });
+
+//VIDE0 97 - ASYNC & AWAIT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+fetch('todos/luigi.json').then((response) => {
+    console.log('resolved', response);
+    return response.json();
+}).then(data => {
+    console.log(data);
+}).catch((err) => {
+    console.log('rejected', err);
 });
-
-console.log(3);
-console.log(4);
